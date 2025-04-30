@@ -25,7 +25,7 @@ st.markdown("Upload an image or provide a URL to analyze what's in the image.")
 
 # Function to get base64 encoding of an image
 def get_image_base64(image):
-    buffered = io.BchroytesIO()
+    buffered = io.BytesIO()
     image.save(buffered, format="JPEG")
     return base64.b64encode(buffered.getvalue()).decode("utf-8")
 
